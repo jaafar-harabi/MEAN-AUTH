@@ -1,0 +1,19 @@
+<div class="container">
+
+    <div class="card mx-auto text-center w-50 mt-5">
+
+        <form class="mt-4 p-5" [formGroup]="registerForm" (ngSubmit)="register()" >
+            <input   type="text" placeholder="firstname" formControlName="name" [ngClass]="{'form-control m-2':true,'error':registerForm.controls['name'].touched && registerForm.controls['name'].invalid}">
+            <input  type="text" placeholder="lastname" formControlName="lastname" [ngClass]="{'form-control m-2':true,'error':registerForm.controls['lastname'].touched && registerForm.controls['lastname'].invalid}">
+
+            <input  type="email" placeholder="email" formControlName="email" [ngClass]="{'form-control m-2':true,'error':registerForm.controls['email'].touched && registerForm.controls['email'].invalid}">
+            <input   type="password" placeholder="password" formControlName="password" [ngClass]="{'form-control m-2':true,'error':registerForm.controls['password'].touched && registerForm.controls['password'].invalid}">
+            <button [disabled]="registerForm.invalid"   class="form-control btn btn-outline-warning m-2" type="submit"> register</button>
+
+            <a routerLink="/login"> login</a>
+        </form>
+
+    </div>
+
+
+</div>

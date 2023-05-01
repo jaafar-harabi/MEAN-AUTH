@@ -1,0 +1,17 @@
+<div class="container">
+
+    <div class="card mx-auto text-center w-50 mt-5">
+
+        <form class="mt-4 p-5" (ngSubmit)="login()" [formGroup]="loginForm">
+
+            <input class="form-control m-2 "  type="email" placeholder="email"  formControlName="email" [ngClass]="{'form-control m-2':true,'error':loginForm.controls['email'].touched && loginForm.controls['email'].invalid}">
+            <input class="form-control m-2 "  type="password" placeholder="password" formControlName="password" [ngClass]="{'form-control m-2':true,'error':loginForm.controls['password'].touched && loginForm.controls['password'].invalid}">
+            <button class="form-control btn btn-outline-warning m-2" type="submit"> login</button>
+
+            <a routerLink="/register"> register</a>
+        </form>
+
+    </div>
+
+
+</div>
